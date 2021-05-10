@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/button_inc"
+    tools:context=".Receipt">
+
+    <RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+        android:padding="10dp"
+        android:background="@drawable/palete_container">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layoutPembeli">
+
+            <ImageView
+                android:id="@+id/logo"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:src="@drawable/logoren"
+                android:layout_centerHorizontal="true"/>
+
+        <TextView
+            android:id="@+id/DataPembeli"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Data Pembeli"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/logo"/>
+
+        <TextView
+            android:id="@+id/editNamaTxt"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Name      :"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_below="@+id/DataPembeli"/>
+        <TextView
+            android:id="@+id/editNama1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Name"
+            android:textSize="20dp"
+            android:layout_toRightOf="@+id/editNamaTxt"
+            android:layout_below="@+id/DataPembeli"/>
+
+        <TextView
+            android:id="@+id/editHpTxt"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="No Hp     :"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_below="@+id/editNamaTxt"/>
+        <TextView
+            android:id="@+id/editHp1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="No Hp"
+            android:textSize="20dp"
+            android:layout_below="@id/editNama1"
+            android:layout_toRightOf="@+id/editHpTxt"/>
+
+        <TextView
+            android:id="@+id/editAlamatTxt"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Alamat   :"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_below="@+id/editHpTxt"/>
+        <TextView
+            android:id="@+id/editAlamat1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Alamat"
+            android:textSize="20dp"
+            android:layout_below="@id/editHp1"
+            android:layout_toRightOf="@+id/editAlamatTxt"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/layoutOrder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/layoutPembeli"
+            android:layout_marginTop="35dp">
+
+        <TextView
+            android:id="@+id/DataOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Data Orderan"
+            android:textStyle="bold"
+            android:textSize="20dp"/>
+
+        <TextView
+            android:id="@+id/NameProductTxt"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Product Name :"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_below="@+id/DataOrder"/>
+        <TextView
+            android:id="@+id/nameProduct"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="Product Name"
+            android:textSize="20dp"
+            android:layout_toRightOf="@+id/NameProductTxt"
+            android:layout_below="@+id/DataOrder"/>
+
+        <TextView
+            android:id="@+id/PriceTxt"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Price                  :"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_below="@+id/NameProductTxt"/>
+        <TextView
+            android:id="@+id/hargaOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Harga"
+            android:textSize="20dp"
+            android:layout_toRightOf="@+id/NameProductTxt"
+            android:layout_below="@+id/nameProduct"/>
+
+        <TextView
+            android:id="@+id/QtyTxt"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Qty                     :"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_below="@+id/PriceTxt"/>
+        <TextView
+            android:id="@+id/jmlOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Jumlah"
+            android:textSize="20dp"
+            android:layout_toRightOf="@+id/QtyTxt"
+            android:layout_below="@+id/hargaOrder"/>
+
+        <TextView
+            android:id="@+id/TotalHargaTxt"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Total Harga      :"
+            android:textStyle="bold"
+            android:textSize="20dp"
+            android:layout_below="@+id/QtyTxt"/>
+        <TextView
+            android:id="@+id/totalOrder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:hint="Total Harga"
+            android:textSize="20dp"
+            android:layout_toRightOf="@+id/TotalHargaTxt"
+            android:layout_below="@+id/jmlOrder"/>
+        <Button
+            android:id="@+id/cetak"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="50dp"
+            android:text="Cetak"
+            android:layout_below="@id/TotalHargaTxt"/>
+
+            <Button
+                android:id="@+id/back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+            android:layout_toRightOf="@id/cetak"
+                android:text="Back"
+                android:layout_marginLeft="100dp"
+                android:layout_below="@id/TotalHargaTxt"/>
+    </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>

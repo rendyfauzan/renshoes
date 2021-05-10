@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/button_inc"
+    tools:context=".Checkout">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp"
+        android:background="@drawable/palete_container">
+
+        <LinearLayout
+        android:id="@+id/layoutText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/nameProductTxt"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Product Name"/>
+
+        <TextView
+            android:id="@+id/priceProductTxt"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/nameProductTxt"
+            android:text="Price"/>
+
+        <TextView
+            android:id="@+id/QtyTxt"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/priceProductTxt"
+            android:text="Qty"/>
+
+        <TextView
+            android:id="@+id/totalOrderTxt"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/QtyTxt"
+            android:text="Total Harga"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:id="@+id/layoutProduct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layoutText">
+
+            <TextView
+                android:id="@+id/nameProduct"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:hint="Product Name" />
+
+            <TextView
+                android:id="@+id/hargaOrder"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/nameProduct"
+                android:hint="Price"/>
+
+            <TextView
+                android:id="@+id/jmlOrder"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/hargaOrder"
+                android:hint="Qty"/>
+
+            <TextView
+                android:id="@+id/totalOrder"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/jmlOrder"
+                android:hint="Total Harga"/>
+        </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/layoutPembeli"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layoutProduct"
+                android:layout_marginTop="20dp">
+
+                <TextView
+                    android:id="@+id/dataPembeli"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:text="Data Pembeli"/>
+
+                <EditText
+                    android:id="@+id/editNama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/dataPembeli"
+                    android:ems="12"
+                    android:textSize="13sp"
+                    android:inputType="textPersonName"
+                    android:hint="Masukkan Nama"/>
+
+                <EditText
+                    android:id="@+id/editHp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/editNama"
+                    android:textSize="13sp"
+                    android:ems="12"
+                    android:inputType="phone"
+                    android:hint="Masukkan No Hp"/>
+
+                <EditText
+                    android:id="@+id/editAlamat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/editHp"
+                    android:textSize="13sp"
+                    android:ems="12"
+                    android:inputType="textPostalAddress"
+                    android:hint="Masukkan Alamat Pengiriman"/>
+            </RelativeLayout>
+
+        <Button
+            android:id="@+id/Bayar2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="140dp"
+            android:layout_marginRight="110dp"
+            android:layout_alignParentRight="true"
+            android:text="Bayar"/>
+
+        <TextView
+            android:id="@+id/metode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:textStyle="italic"
+            android:text="Metode Pembayaran"
+            android:layout_below="@id/layoutPembeli"/>
+
+        <RelativeLayout
+            android:id="@+id/bankMandiri"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_below="@id/metode">
+
+            <ImageView
+                android:id="@+id/ftmandiri"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:src="@drawable/mandiri"/>
+            <TextView
+                android:id="@+id/mandiri"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bank Mandiri"
+                android:layout_toRightOf="@id/ftmandiri"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/noMandiri"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="no rekening : 123-55687-00"
+                android:layout_toRightOf="@id/ftmandiri"
+                android:layout_below="@id/mandiri"/>
+            <TextView
+                android:id="@+id/nmMandiri"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="a/n Rendy Fauzan"
+                android:layout_toRightOf="@id/ftmandiri"
+                android:layout_below="@id/noMandiri" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bankBCA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bankMandiri">
+
+            <ImageView
+                android:id="@+id/ftbca"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/bca"/>
+            <TextView
+                android:id="@+id/BCA"
+                android:layout_marginTop="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bank BCA"
+                android:layout_toRightOf="@id/ftbca"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/noBCA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="no rekening : 556-33589-36"
+                android:layout_toRightOf="@id/ftbca"
+                android:layout_below="@id/BCA"/>
+            <TextView
+                android:id="@+id/nmBCA"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="a/n Rendy Fauzan"
+                android:layout_toRightOf="@id/ftbca"
+                android:layout_below="@id/noBCA"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/bankBNI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bankBCA">
+
+            <ImageView
+                android:id="@+id/ftbni"
+                android:layout_width="100dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/bni"/>
+            <TextView
+                android:id="@+id/BNI"
+                android:layout_marginTop="7dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Bank BNI"
+                android:layout_toRightOf="@id/ftbni"
+                android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/noBNI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="no rekening : 789-00585-07"
+                android:layout_toRightOf="@id/ftbni"
+                android:layout_below="@id/BNI"/>
+            <TextView
+                android:id="@+id/nmBNI"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="a/n Rendy Fauzan"
+                android:layout_toRightOf="@id/ftbni"
+                android:layout_below="@id/noBNI"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</LinearLayout>
